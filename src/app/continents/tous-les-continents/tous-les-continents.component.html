@@ -1,0 +1,30 @@
+<div class="container mt-2">
+  <div class="row row-cols-1 row-cols-md-3 g-2">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Code continent</th>
+          <th scope="col">Nom continent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of continent">
+          <td scope="row">{{ item.code }}</td>
+          <td scope="row">{{ item.name }}</td>
+        </tr>
+      </tbody>
+      <div class="container mt-2">
+        <div class="row mt-2">
+          <div class="col col-md-4 offset-md-4">
+            <button class="btn btn-primary" routerLink="/ajouter-continent">
+              Ajouter un continent
+            </button>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-2">
+          <!-- existing code hidden for display purpose -->
+        </div>
+      </div>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container mt-2">
+  <legend>Creer continent</legend>
+  <br />
+  <form>
+    <div class="mb-3">
+      <label for="txtCode" class="form-label">Code</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="continent.code"
+        class="form-control"
+        id="txtCode"
+      />
+    </div>
+    <div class="space"></div>
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Nom</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="continent.name"
+        class="form-control"
+        id="txtName"
+      />
+    </div>
+    <div class="space"></div>
+    <br />
+    <button type="button" (click)="create()" class="btn btn-primary">
+      Creer
+    </button>
+  </form>
+</div>
