@@ -8,6 +8,7 @@
       <div class="input-group">
         <div class="input-group-prepend"></div>
         <input
+          [(ngModel)]="search.code"
           id="oSaisie"
           name="oSaisie"
           type="text"
@@ -18,6 +19,7 @@
         />
         <div class="input-group-prepend"></div>
         <input
+          [(ngModel)]="search.kw"
           id="oSaisie"
           name="oSaisie"
           type="text"
@@ -26,8 +28,20 @@
           placeholder="Mot(s) clé(s)"
           required="required"
         />
+        <select name="pets" id="pet-select" [(ngModel)]="search.lang">
+          <option value="">--choisir une langue--</option>
+          <option value="fr">français</option>
+          <option value="ang">anglais</option>
+          <option value="russ">russe</option>
+          <option value="esp">espagnol</option>
+          <option value="ch">chinois</option>
+          <option value="all">Allemand</option>
+          <option value="neerd">nerlandais</option>
+        </select>
         <div class="input-group-append">
-          <button class="btn btn-primary" type="submit">Recherche</button>
+          <button class="btn btn-primary" (click)="onSearch()">
+            Recherche
+          </button>
         </div>
       </div>
     </fieldset>
@@ -48,18 +62,6 @@
           <td scope="row">{{ item.name }}</td>
         </tr>
       </tbody>
-      <div class="container mt-2">
-        <div class="row mt-2">
-          <div class="col col-md-4 offset-md-4">
-            <button class="btn btn-primary" routerLink="/ajouter-continent">
-              Ajouter un continent
-            </button>
-          </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-2">
-          <!-- existing code hidden for display purpose -->
-        </div>
-      </div>
     </table>
   </div>
 </div>

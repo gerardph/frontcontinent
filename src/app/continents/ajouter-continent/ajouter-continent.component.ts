@@ -25,6 +25,7 @@ export class AjouterContinentComponent implements OnInit {
     this.continentService.create(this.continent).subscribe(() => {
       this.router.navigate(['/']);
     });
+
+  }
   }
 
-}
